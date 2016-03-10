@@ -1,8 +1,11 @@
 package com.example.helloworld;
 
-import com.example.helloworld.core.Person;
-import com.example.helloworld.api.Saying;
 import com.google.common.base.Optional;
+import com.hardhand.wedder.WedderApplication;
+import com.hardhand.wedder.WedderConfiguration;
+import com.hardhand.wedder.api.Saying;
+import com.hardhand.wedder.core.Person;
+
 import io.dropwizard.testing.ConfigOverride;
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
@@ -23,8 +26,8 @@ public class IntegrationTest {
     private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-example.yml");
 
     @ClassRule
-    public static final DropwizardAppRule<HelloWorldConfiguration> RULE = new DropwizardAppRule<>(
-            HelloWorldApplication.class, CONFIG_PATH,
+    public static final DropwizardAppRule<WedderConfiguration> RULE = new DropwizardAppRule<>(
+            WedderApplication.class, CONFIG_PATH,
             ConfigOverride.config("database.url", "jdbc:h2:" + TMP_FILE));
 
     private Client client;

@@ -1,9 +1,11 @@
 package com.example.helloworld.resources;
 
-import com.example.helloworld.core.Person;
-import com.example.helloworld.db.PersonDAO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.ImmutableList;
+import com.hardhand.wedder.core.Person;
+import com.hardhand.wedder.db.PersonDAO;
+import com.hardhand.wedder.resources.PeopleResource;
+
 import io.dropwizard.testing.junit.ResourceTestRule;
 import org.junit.After;
 import org.junit.Before;

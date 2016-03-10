@@ -1,8 +1,5 @@
 package com.example.helloworld.resources;
 
-import com.example.helloworld.auth.ExampleAuthenticator;
-import com.example.helloworld.auth.ExampleAuthorizer;
-import com.example.helloworld.core.User;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;
 import io.dropwizard.auth.basic.BasicCredentialAuthFilter;
@@ -13,6 +10,11 @@ import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 import org.glassfish.jersey.test.grizzly.GrizzlyWebTestContainerFactory;
 import org.junit.ClassRule;
 import org.junit.Test;
+
+import com.hardhand.wedder.auth.ExampleAuthenticator;
+import com.hardhand.wedder.auth.ExampleAuthorizer;
+import com.hardhand.wedder.core.User;
+import com.hardhand.wedder.resources.ProtectedClassResource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.failBecauseExceptionWasNotThrown;
